@@ -5,26 +5,43 @@
  */
 package CommandPattern;
 
-/**
- *
- * @author tophu
- */
-public class Chitietgiohang implements command{
-    String tenhang;
+public class Chitietgiohang {
+    String Tenhang;
     int soluong;
     int dongia;
-    Store store;
 
-    public Chitietgiohang(String tenhang, int soluong, int dongia, Store store) {
-        this.tenhang = tenhang;
+    public Chitietgiohang(String Tenhang, int soluong, int dongia) {
+        this.Tenhang = Tenhang;
         this.soluong = soluong;
         this.dongia = dongia;
-        this.store = store;
     }
 
-    @Override
-    public void mua() {
-        System.out.println(store.muahang(tenhang, soluong, dongia));
+    public Chitietgiohang() {
     }
+
+    public String getTenhang() {
+        return Tenhang;
+    }
+
+    public void setTenhang(String Tenhang) {
+        this.Tenhang = Tenhang;
+    }
+
+    public int getSoluong() {
+        return soluong;
+    }
+
+    public void setSoluong(int soluong) {
+        this.soluong = soluong;
+    }
+
+    public int getDongia() {
+        return dongia;
+    }
+
+    public void setDongia(int dongia) {
+        this.dongia = dongia;
+    }
+    
     
 }
