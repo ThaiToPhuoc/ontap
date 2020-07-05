@@ -12,17 +12,17 @@ package FactoryPattern;
 public class factorymain {
     public static void main(String[] args) {
         
-        ShapeFactory hinha = new ShapeFactory(Shapetype.Triangle);
-        Shape Ha = hinha.createShape();
-        ShapeFactory hinhb = new ShapeFactory(Shapetype.Circle);
-        Shape Hb = hinhb.createShape();
-        ShapeFactory hinhc = new ShapeFactory(Shapetype.Rectangle);
-        Shape Hc = hinhc.createShape();
-        
-        System.out.println("Factory pattern:\n");
-        System.out.println(Ha.Draw()+"\n");
-        System.out.println(Hb.Draw()+"\n");
-        System.out.println(Hc.Draw()+"\n");
+//        ShapeFactory hinha = new ShapeFactory(Shapetype.Triangle);
+//        Shape Ha = hinha.createShape();
+//        ShapeFactory hinhb = new ShapeFactory(Shapetype.Circle);
+//        Shape Hb = hinhb.createShape();
+//        ShapeFactory hinhc = new ShapeFactory(Shapetype.Rectangle);
+//        Shape Hc = hinhc.createShape();
+//        
+//        System.out.println("Factory pattern:\n");
+//        System.out.println(Ha.Draw()+"\n");
+//        System.out.println(Hb.Draw()+"\n");
+//        System.out.println(Hc.Draw()+"\n");
         
         System.out.println("\n Singleton: ");
         ShapeFactorySingleton Hinh1 = ShapeFactorySingleton.Createinstance();
@@ -32,7 +32,7 @@ public class factorymain {
         Hinh1.setType(Shapetype.Triangle);
         Shape H1 = Hinh1.createShape();
         
-        System.out.println("\n" + H1.Draw());
+       System.out.println("\n" + H1.Draw());
         
         Hinh2.setType(Shapetype.Circle);
         H1 = Hinh1.createShape();

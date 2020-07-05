@@ -29,7 +29,9 @@ public class ATM {
     
     public void ruttien(float tienrut){
         if(kiemtratienrut(tienrut))
+        {
             observer.nhanthongbao(tienrut, "Giao dịch thành công");
+        }
         else
             observer.nhanthongbao(tienrut, "Không đủ tiền để rút");
     }

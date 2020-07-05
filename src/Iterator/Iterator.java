@@ -13,5 +13,6 @@ public abstract class Iterator {
     public abstract int first();
     public abstract int next();
     public abstract boolean isdone();
+    public abstract int last();
     public abstract int current();
 }

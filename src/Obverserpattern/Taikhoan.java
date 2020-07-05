@@ -12,10 +12,6 @@ public class Taikhoan implements ATM.ATM_observer{
         return sodu;
     }
     
-    
-    public Taikhoan() {
-    }
-    
     public void Dangnhap(ATM t){
         t.laythongtintaikhoan((ATM.ATM_observer) this);
     }

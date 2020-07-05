@@ -42,5 +42,10 @@ public class ConcreteIterator extends Iterator{
     public int current() {
         return A.getArr()[position];
     }
+
+    @Override
+    public int last() {
+        return A.getArr()[A.getArr().length - 1];
+    }
     
 }

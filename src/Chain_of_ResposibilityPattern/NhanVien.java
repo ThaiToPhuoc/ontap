@@ -14,7 +14,8 @@ public class NhanVien {
     String Ten;
     Phophong captren;
 
-    public NhanVien(int tienvay ,int hanmuc, String Ten, Phophong captren) {
+    public NhanVien(int tienvay ,int hanmuc, String Ten, Phophong captren) 
+    {
         this.tienvay = tienvay;
         this.hanmuc = hanmuc;
         this.Ten = Ten;

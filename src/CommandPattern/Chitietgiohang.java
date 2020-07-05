@@ -5,7 +5,7 @@
  */
 package CommandPattern;
 
-public class Chitietgiohang {
+public class Chitietgiohang{
     String Tenhang;
     int soluong;
     int dongia;
@@ -41,7 +41,6 @@ public class Chitietgiohang {
 
     public void setDongia(int dongia) {
         this.dongia = dongia;
-    }
-    
+    }   
     
 }
