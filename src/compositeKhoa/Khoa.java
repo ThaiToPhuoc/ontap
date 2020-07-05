@@ -3,46 +3,47 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package compositepattern;
+package compositeKhoa;
+
 import java.util.ArrayList;
+
 /**
  *
  * @author tophu
  */
-public class folder extends abstractfile{
-    
-    ArrayList<abstractfile> file = new ArrayList<>();
+public class Khoa extends abstractkhoa{
+    ArrayList<abstractkhoa> ListBM = new ArrayList<>();
 
-    public folder(String Ten) {
+    public Khoa(String Ten) {
         super(Ten);
     }
-    
+
     @Override
-    public void add(abstractfile f) {
-        if(file.contains(f))
+    public void add(abstractkhoa f) {
+        if(ListBM.contains(f))
             return;
-        file.add(f);
+        ListBM.add((Bomon)f);
         f.setPath(this.path + "/" + f.path);
     }
 
     @Override
-    public void remove(abstractfile f) {
-        if(file.contains(f))
+    public void remove(abstractkhoa f) {
+        if(ListBM.contains(f))
         {
-            file.remove(f);
+            ListBM.remove(f);
             return;
         }
-        for(abstractfile folder: file)
-            folder.remove(f);
+        for(abstractkhoa Bomon: ListBM)
+            Bomon.remove(f);
     }
 
     @Override
     public String gettreefolder() {
         StringBuilder builder = new StringBuilder();
         builder.append(Ten).append(":\n");
-        for(abstractfile f: file)
+        for(abstractkhoa f: ListBM)
         {
-            if(f instanceof file)
+            if(f instanceof Bomon)
                 builder.append("\n").append(f.gettreefolder());
             else
                 builder.append("\n").append(f.gettreefolder());
