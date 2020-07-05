@@ -35,11 +35,11 @@ public class buildermain {
                 .addchitiet(SP3)
                 .build();
         
-        System.out.println("\n builder singleton: \n"+HD1.toString());
+        System.out.println("\n builder singleton: \n"+HD2.toString());
         
-         Hoadonsingleton HD3 = new Hoadonsingleton.buildersingleton().createinstance().build();
+         Hoadonsingleton HD3 = Hoadonsingleton.Createinstance();
          
-         System.out.println("\n"+HD1.toString());
+         System.out.println("\n"+HD3.toString());
         
     }
 }

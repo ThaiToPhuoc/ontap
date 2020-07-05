@@ -14,13 +14,11 @@ import java.util.ArrayList;
 public class Hoadonsingleton {
     Hoadonheader header = new Hoadonheader();
     ArrayList<CTHD> chitiet = new ArrayList<>();
+
     
      protected Hoadonsingleton(buildersingleton builder) {
         this.header = builder.header;
         this.chitiet = builder.chitiet;
-    }
-
-    private Hoadonsingleton() {
     }
 
     public String hienthiCTHD(){
@@ -47,8 +45,6 @@ public class Hoadonsingleton {
         Hoadonheader header = new Hoadonheader();
         ArrayList<CTHD> chitiet = new ArrayList<>();
         
-        public static buildersingleton instance;
-        
         public buildersingleton setheader(Hoadonheader HD){
             this.header = HD;
             return this;
@@ -58,14 +54,27 @@ public class Hoadonsingleton {
             this.chitiet.add(p);
             return this;
         }
-                
-        public buildersingleton createinstance() {
+        
+        public Hoadonsingleton build(){
             if(instance == null)
-                instance = new buildersingleton();
+                instance = new Hoadonsingleton();
+            instance.chitiet = this.chitiet;
+            instance.header = this.header;
             return instance;
         }
-        public Hoadonsingleton build(){
-            return new Hoadonsingleton(this);
-        }
     }
+    
+    
+
+    public Hoadonsingleton() {
+    }
+    
+    
+    public static Hoadonsingleton instance;
+    
+    
+    public static Hoadonsingleton Createinstance(){
+        return instance;
+    }
+    
 }
