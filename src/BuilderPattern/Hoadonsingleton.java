@@ -47,7 +47,7 @@ public class Hoadonsingleton {
         Hoadonheader header = new Hoadonheader();
         ArrayList<CTHD> chitiet = new ArrayList<>();
         
-         public static buildersingleton instance;
+        public static buildersingleton instance;
         
         public buildersingleton setheader(Hoadonheader HD){
             this.header = HD;
