@@ -9,11 +9,11 @@ package CommandPattern;
  *
  * @author tophu
  */
-public class dathang implements ICommand{
+public class dathangCommand implements ICommand{
     Chitietgiohang product;
     Store store;
 
-    public dathang(Chitietgiohang product, Store store) {
+    public dathangCommand(Chitietgiohang product, Store store) {
         this.product = product;
         this.store = store;
     }
