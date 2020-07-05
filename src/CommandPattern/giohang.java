@@ -13,13 +13,13 @@ import java.util.List;
  * @author tophu
  */
 public class giohang {
-    List<Command> CTGH = new ArrayList<>();
+    List<dathang> CTGH = new ArrayList<>();
     Store store = new Store();
 
     public giohang() {
     }
 
-    public List<Command> getCTGH() {
+    public List<dathang> getCTGH() {
         return CTGH;
     }
 
@@ -29,7 +29,7 @@ public class giohang {
         store.nhangiohang(this);
     }
     
-     public void duyet(Command cmd) {
+     public void duyet(dathang cmd) {
          System.out.println("\n Đã thêm " + cmd.getProduct().getTenhang() + " vào giỏ hàng!");
          CTGH.add(cmd);
     }
@@ -47,7 +47,7 @@ public class giohang {
     {
         int tong = 0;
         System.out.println("Danh sách các món hàng đã mua:");
-        for(Command cmd : CTGH)
+        for(dathang cmd : CTGH)
         {
             cmd.excute();
             tong += cmd.tinhtien();
