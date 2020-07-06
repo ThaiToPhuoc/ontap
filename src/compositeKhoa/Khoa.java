@@ -22,8 +22,14 @@ public class Khoa extends abstractkhoa{
     public void add(abstractkhoa f) {
         if(ListBM.contains(f))
             return;
-        ListBM.add((Bomon)f);
-        f.setPath(this.path + "/" + f.path);
+        if(f instanceof Bomon)
+        {
+             ListBM.add((Bomon)f);
+            f.setPath(this.path + "/" + f.path);
+        }
+        else
+            System.out.println("Không thêm được! ");
+        return;
     }
 
     @Override

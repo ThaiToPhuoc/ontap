@@ -25,8 +25,14 @@ public class Bomon extends abstractkhoa{
     public void add(abstractkhoa f) {
         if(ListGV.contains(f))
             return;
-        ListGV.add((Giangvien)f);
-        f.setPath(this.path + "/" + f.path);
+        if(f instanceof Giangvien)
+        {
+            ListGV.add(f);
+            f.setPath(this.path + "/" + f.path);
+        }
+        else
+            System.out.println("Không thêm được!");
+        return;
     }
 
     @Override

@@ -29,5 +29,8 @@ public class compositeKhoa {
         Giaitich.add(Khoa);
         
         System.out.println(Khoa.getPath());
+        
+        System.out.println("\nKiểm tra: ");
+        C.add(Toan);
     }
 }
