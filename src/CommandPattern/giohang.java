@@ -48,7 +48,7 @@ public class giohang {
     public void redo()
     {
         if (!chuaduyet.isEmpty()) {
-            System.out.println("\n Đã thêm lại " + chuaduyet.get(chuaduyet.size()-1).getProduct().getTenhang() + " vào khỏi giỏ hàng!");
+            System.out.println("\n Đã thêm lại " + chuaduyet.get(chuaduyet.size()-1).getProduct().getTenhang() + " vào giỏ hàng!");
             duyet.add(chuaduyet.get(chuaduyet.size()-1));
             chuaduyet.remove(chuaduyet.size() - 1);
         } else {
