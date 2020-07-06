@@ -15,19 +15,12 @@ import java.util.List;
 public class giohang {
     List<dathangCommand> duyet = new ArrayList<>();
     List<dathangCommand> chuaduyet = new ArrayList<>();
-    Store store = new Store();
 
     public giohang() {
     }
 
     public List<dathangCommand> getduyet() {
         return duyet;
-    }
-
-    
-    public void chuyentoistore(Store store) {
-        this.store = store;
-        store.nhangiohang(this);
     }
     
      public void addcommand(dathangCommand cmd) {

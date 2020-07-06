@@ -10,14 +10,6 @@ package CommandPattern;
  * @author tophu
  */
 public class Store {
-    giohang giohang;
-
-    public void nhangiohang(giohang gh)
-    {
-        gh.chuyentoistore(this);
-        this.giohang = gh;
-    }
-    
     public int tinhtien(Chitietgiohang product)
     {
         return product.getDongia() * product.getSoluong();
