@@ -18,10 +18,6 @@ public class giohang {
 
     public giohang() {
     }
-
-    public List<dathangCommand> getduyet() {
-        return duyet;
-    }
     
      public void addcommand(dathangCommand cmd) {
          System.out.println("\n Đã thêm " + cmd.getProduct().getTenhang() + " vào giỏ hàng!");
