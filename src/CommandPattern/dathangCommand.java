@@ -12,7 +12,13 @@ package CommandPattern;
 public class dathangCommand implements ICommand{
     Chitietgiohang product;
     Store store;
+    int thanhtien;
 
+    public int getThanhtien() {
+        return thanhtien;
+    }
+
+    
     public dathangCommand(Chitietgiohang product, Store store) {
         this.product = product;
         this.store = store;
@@ -27,15 +33,11 @@ public class dathangCommand implements ICommand{
     @Override
     public void excute() {
         System.out.println("\n" + product.getTenhang() + ", " + product.getSoluong() + ", "+ product.getDongia());
+        this.thanhtien = store.tinhtien(product);
     }
 
     @Override
     public void unexcute() {
         store.huy();
-    }
-    
-    public int tinhtien()
-    {
-        return store.tinhtien(product);
     }
 }

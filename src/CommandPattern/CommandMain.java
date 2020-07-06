@@ -17,12 +17,17 @@ public class CommandMain {
         dathangCommand cmd2 = new dathangCommand(new Chitietgiohang("RAM", 3, 50),store);
         dathangCommand cmd3 = new dathangCommand(new Chitietgiohang("USB", 2, 40),store);
         
-        gh.duyet(cmd1);
-        gh.duyet(cmd2);
-        gh.duyet(cmd3);
+        gh.addcommand(cmd1);
+        gh.addcommand(cmd2);
+        gh.addcommand(cmd3);
         gh.xacnhanmua();
         
-        gh.huyduyet();
+        System.out.println("\n Kiểm tra lệnh undo: \n");
+        gh.undo();
+        gh.xacnhanmua();
+        
+         System.out.println("\n Kiểm tra lệnh redo: \n");
+        gh.redo();
         gh.xacnhanmua();
     }
 }

@@ -13,14 +13,15 @@ import java.util.List;
  * @author tophu
  */
 public class giohang {
-    List<dathangCommand> CTGH = new ArrayList<>();
+    List<dathangCommand> duyet = new ArrayList<>();
+    List<dathangCommand> chuaduyet = new ArrayList<>();
     Store store = new Store();
 
     public giohang() {
     }
 
-    public List<dathangCommand> getCTGH() {
-        return CTGH;
+    public List<dathangCommand> getduyet() {
+        return duyet;
     }
 
     
@@ -29,17 +30,29 @@ public class giohang {
         store.nhangiohang(this);
     }
     
-     public void duyet(dathangCommand cmd) {
+     public void addcommand(dathangCommand cmd) {
          System.out.println("\n Đã thêm " + cmd.getProduct().getTenhang() + " vào giỏ hàng!");
-         CTGH.add(cmd);
+         duyet.add(cmd);
     }
  
-    public void huyduyet() {
-        if (!CTGH.isEmpty()) {
-            System.out.println("\n Đã bỏ " + CTGH.get(CTGH.size()-1).getProduct().getTenhang() + " ra khỏi giỏ hàng!");
-            CTGH.remove(CTGH.size() - 1);
+    public void undo() {
+        if (!duyet.isEmpty()) {
+            System.out.println("\n Đã bỏ " + duyet.get(duyet.size()-1).getProduct().getTenhang() + " ra khỏi giỏ hàng!");
+            chuaduyet.add(duyet.get(duyet.size()-1));
+            duyet.remove(duyet.size() - 1);
         } else {
             System.out.println("Không còn hàng để hủy!");
+        }
+    }
+    
+    public void redo()
+    {
+        if (!chuaduyet.isEmpty()) {
+            System.out.println("\n Đã thêm lại " + chuaduyet.get(chuaduyet.size()-1).getProduct().getTenhang() + " vào khỏi giỏ hàng!");
+            duyet.add(chuaduyet.get(chuaduyet.size()-1));
+            chuaduyet.remove(chuaduyet.size() - 1);
+        } else {
+            System.out.println("đã thêm lại hết!!");
         }
     }
     
@@ -47,10 +60,10 @@ public class giohang {
     {
         int tong = 0;
         System.out.println("Danh sách các món hàng đã mua:");
-        for(dathangCommand cmd : CTGH)
+        for(dathangCommand cmd : duyet)
         {
             cmd.excute();
-            tong += cmd.tinhtien();
+            tong = cmd.getThanhtien();
         }
         System.out.println("\n Tổng cộng: " + tong);
     }
