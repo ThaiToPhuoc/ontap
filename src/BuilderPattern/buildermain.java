@@ -37,7 +37,7 @@ public class buildermain {
         
         System.out.println("\n builder singleton: \n"+HD2.toString());
         
-         Hoadonsingleton HD3 = Hoadonsingleton.Createinstance();
+         Hoadonsingleton HD3 = new Hoadonsingleton.buildersingleton().build();
          
          System.out.println("\n"+HD3.toString());
         

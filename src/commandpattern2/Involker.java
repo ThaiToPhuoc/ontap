@@ -32,6 +32,7 @@ public class Involker {
         else
         {
             this.Undo.add(Done.get(Done.size() - 1));
+            Done.get(Done.size()-1).unexcute();
             Done.remove(Done.size()-1);
         }
     }

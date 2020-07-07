@@ -25,7 +25,9 @@ public class commandmain {
         giohang.addcommand(cmd3);
         giohang.ExcuteAll();
         
-        System.out.println("\nKiểm tra lệnh undo: ");
+        System.out.println("\nKiểm tra lệnh undo: \n");
+        giohang.undo();
+        giohang.undo();
         giohang.undo();
         giohang.ExcuteAll();
     }

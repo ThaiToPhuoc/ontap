@@ -10,6 +10,7 @@ package FactoryPattern;
  * @author tophu
  */
 public abstract class Shape {
+    
      String Brush = "", Paper = "", Frame = "";
     
     public abstract String Draw();

@@ -45,36 +45,20 @@ public class Hoadonsingleton {
         Hoadonheader header = new Hoadonheader();
         ArrayList<CTHD> chitiet = new ArrayList<>();
         
+        private static buildersingleton instance = new buildersingleton();
+        
         public buildersingleton setheader(Hoadonheader HD){
-            this.header = HD;
-            return this;
+            instance.header = HD;
+            return instance;
         }
         
         public buildersingleton addchitiet(CTHD p){
-            this.chitiet.add(p);
-            return this;
+            instance.chitiet.add(p);
+            return instance;
         }
         
         public Hoadonsingleton build(){
-            if(instance == null)
-                instance = new Hoadonsingleton();
-            instance.chitiet = this.chitiet;
-            instance.header = this.header;
-            return instance;
+            return new Hoadonsingleton(instance);
         }
     }
-    
-    
-
-    public Hoadonsingleton() {
-    }
-    
-    
-    public static Hoadonsingleton instance;
-    
-    
-    public static Hoadonsingleton Createinstance(){
-        return instance;
-    }
-    
 }
